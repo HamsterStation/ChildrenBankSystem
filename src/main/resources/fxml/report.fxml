@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane stylesheets="@../css/bank.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.VirtualChildBank.controller.reportController">
+    <center>
+        <AnchorPane prefHeight="690.0" prefWidth="1020.0" styleClass="content-pane">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <StackPane layoutX="1165.0" layoutY="6.0" prefHeight="27.0" prefWidth="28.0">
+                    <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" styleClass="close-btn">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </Region>
+                    </children>
+                    <styleClass>
+                        <String fx:value="close-btn" />
+                        <String fx:value="svg-btn" />
+                    </styleClass>
+                </StackPane>
+                <StackPane layoutX="3.0" layoutY="6.0" onMousePressed="#onBackAction" prefHeight="27.0" prefWidth="28.0">
+                    <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" styleClass="back-btn">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </Region>
+                    </children>
+                    <styleClass>
+                        <String fx:value="back-btn" />
+                        <String fx:value="svg-btn" />
+                    </styleClass>
+                </StackPane>
+                <ImageView fitHeight="659.0" fitWidth="1159.0" layoutX="3.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/report.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

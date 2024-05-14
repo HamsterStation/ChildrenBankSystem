@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane stylesheets="@../css/bank.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.VirtualChildBank.controller.accountRegisterController">
+    <center>
+        <AnchorPane prefHeight="690.0" prefWidth="1020.0" styleClass="content-pane">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <ImageView fitHeight="323.0" fitWidth="349.0" layoutX="407.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="10.0">
+                    <image>
+                        <Image url="@../image/smallicon.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="441.0" layoutY="302.0" prefHeight="65.0" prefWidth="301.0" styleClass="userlogin-label" text="Account Registion">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+                <Pane layoutX="271.0" layoutY="384.0" prefHeight="263.0" prefWidth="664.0" styleClass="login-pane">
+                    <children>
+                        <TextField fx:id="accountIdField" layoutX="171.0" layoutY="94.0" prefHeight="57.0" prefWidth="433.0" promptText="enter your id there">
+                            <font>
+                                <Font size="27.0" />
+                            </font></TextField>
+                        <Label layoutX="14.0" layoutY="85.0" prefHeight="74.0" prefWidth="174.0" text="Accountid:">
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="213.0" layoutY="193.0" onMousePressed="#onRegisterAction" prefHeight="69.0" prefWidth="207.0" styleClass="loginidentify-label" text="      Register">
+                            <font>
+                                <Font name="System Bold Italic" size="27.0" />
+                            </font>
+                        </Label>
+                  <CheckBox fx:id="currentCheckBox" layoutX="152.0" layoutY="165.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" styleClass="Register-CheckBox" text="current">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="savingCheckBox" layoutX="400.0" layoutY="162.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="81.0" styleClass="Register-CheckBox" text="saving">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                    </children>
+                </Pane>
+                <StackPane layoutX="1165.0" layoutY="6.0" onMousePressed="#onCloseAction" prefHeight="27.0" prefWidth="28.0">
+                    <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" styleClass="close-btn">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </Region>
+                    </children>
+                    <styleClass>
+                        <String fx:value="close-btn" />
+                        <String fx:value="svg-btn" />
+                    </styleClass>
+                </StackPane>
+                <StackPane layoutX="3.0" layoutY="6.0" onMousePressed="#onBackAction" prefHeight="27.0" prefWidth="28.0">
+                    <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" styleClass="back-btn">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </Region>
+                    </children>
+                    <styleClass>
+                        <String fx:value="back-btn" />
+                        <String fx:value="svg-btn" />
+                    </styleClass>
+                </StackPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
